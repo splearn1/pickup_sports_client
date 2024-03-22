@@ -1,0 +1,34 @@
+<div class="container">
+  <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" formControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" formControlName="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password">
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirmation">Confirm Password</label>
+      <input type="text" formControlName="passwordConfirmation">
+    </div>
+
+    @for (error of errors; track $index) {
+      <p class="error">{{error}}</p>
+    }
+
+    <button type="submit">Sign Up</button>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="post-header">
+    <div class="post-header-left">
+      <img src="https://media.istockphoto.com/id/1451587807/vector/user-profile-icon-vector-avatar-or-person-icon-profile-picture-portrait-symbol-vector.jpg?s=612x612&w=0&k=20&c=yDJ4ITX1cHMh25Lt1vI1zBn2cAKKAlByHBvPJ8gEiIg=" alt="profile image">
+      <div class="post-header-info">
+        <div class="post-header-info-name">{{post.user?.username}}</div>
+        <div class="post-header-info-date">{{post.createdAt | date}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-content">{{post.content}}</div>
+</div>
