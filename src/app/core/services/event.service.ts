@@ -11,6 +11,6 @@ export class EventService {
   constructor(private http:HttpClient) { }
 
   getEvents(page:number){
-    return this.http.get<Event[]>(`$(environment.apiUrl}/events?page=${page}`)
+    return this.http.get<Event[]>(`${environment.apiUrl}/events?page=${page}`)
   }
 }

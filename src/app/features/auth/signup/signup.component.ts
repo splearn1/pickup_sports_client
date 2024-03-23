@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent {
   signupForm: FormGroup = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
+    first_name: new FormControl(''),
+    last_name: new FormControl(''),
     email: new FormControl(''),
     username: new FormControl(''),
-    password: new FormControl('')
-    passwordConfirmation: new FormControl('')
+    password: new FormControl(''),
+    password_confirmation: new FormControl('')
   })
 
   errors:string[] = [];
@@ -26,6 +26,7 @@ export class SignupComponent {
 
   onSignup = () => {
     const formValue = this.signupForm.value;
+    console.log(formValue);
     this.authService.signup(formValue).subscribe({
       next: (res:any) => {
         this.router.navigate(['/login']);
