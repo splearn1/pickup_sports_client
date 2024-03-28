@@ -4,8 +4,8 @@ export class Event {
   id: number;
   title: string;
   content: string;
-  startDateTime: string;
-  endDateTime: string;
+  start_date_time: string;
+  end_date_time: string;
   createdAt: string;
   user: User;
 
@@ -13,8 +13,8 @@ export class Event {
     this.id = event.id || 0;
     this.title = event.title || "";
     this.content = event.content || "";
-    this.startDateTime = event.startDateTime;
-    this.endDateTime = event.endDateTime;
+    this.start_date_time = event.start_date_time;
+    this.end_date_time = event.end_date_time;
     this.createdAt = event.createdAt;
     this.user = event.user || new User({})
   }
